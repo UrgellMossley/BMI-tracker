@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <title>BMI Calculator</title>
+</head>
+<body>
+    <main class="container">
+        <header class="nav-container">
+            <h1>BMI Calculator</h1>
+            <nav class="nav-box">
+                    <a href="#"><img src="/img/croppedtransparent.png" alt="logo"></a>
+                    <a href="#"><img src="/img/nhs-icon-green.png" alt="NHS icon"></a>
+                    <a href="#"><i class="fab fa-linkedin fa-5x icon-white"></i></a>
+            </nav>
+        </header>
+        <section id="bmi-explainer" class="text-container">
+            <h2 class="lead-text font-xl">What is BMI and why Should I Care?</h2>
+
+            <img src="/img/hush-naidoo-jade-photography-pA0uoltkwao-unsplash.jpg" alt="picture of healthcare worker">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores porro, laudantium et quasi incidunt blanditiis velit iste officiis amet placeat possimus repellendus cumque vitae, quibusdam perspiciatis eveniet rerum minus odit!</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus dolorem molestiae tempora veritatis quaerat id perferendis voluptate, esse tempore, magni, totam nam optio in facere nobis aut. Obcaecati fuga totam, nesciunt debitis provident facilis placeat fugit odit, dolores ut veniam.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique beatae doloremque cumque rem dolorum! Provident voluptatibus minima officiis doloribus id.</p>
+        </section>
+        <h2>Calculate Your Body Mass Index</h2>
+            <form action="#" class="calculator">
+              
+              <section class="units-container">
+                  <p class="font-lg"> <strong>Instructions:</strong> <br> Enter your details and click submit, we'll do the rest!</p>
+
+                  <div class="select">
+                    <label for="units">Select your units</label>
+                    <select list="unit-type" name="units" placeholder="Metric">
+                        <option value="Metric">Metric</option>
+                        <option value="Imperial">Imperial</option>
+                    </select>
+                  </div>
+                    
+              </section>
+              <section class="calculate-container">
+                        <div class="inputs">
+                            <div class="text">
+                            <div class="span-wrapper">
+                                <small>kg</small>
+                            </div>
+                            <input type="number" name="weight" id="weight" placeholder="Enter your weight">
+                        </div>
+                        <div class="text">
+                            <div class="span-wrapper">
+                                <small>cm</small>
+                            </div>
+                            <input type="number" name="height" id="height" placeholder="Enter your height">
+                        </div>
+                  </div>
+                <button class="submit">Calculate <i class="fa-solid fa-play icon-green"></i></button>
+                 
+                  
+              </section>
+            </form>
+       
+        <section class="text-container font-xl"id="diet">
+            <img src="./img/brooke-lark-nTZOILVZuOg-unsplash.jpg" alt="picture of healthy meal">
+            <h2 class="lead-text">Diet and Nutrition</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, eos ipsam. Soluta ipsam tempora eligendi sapiente sint! Deleniti, mollitia debitis?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae nihil saepe nesciunt quod eligendi officiis consectetur veniam molestias. Similique doloremque numquam, provident expedita libero quaerat aliquam natus dolore voluptas ducimus architecto veritatis impedit dolorum harum!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui reiciendis minima natus modi a amet? Harum maxime sed ab voluptas ratione amet ex quasi pariatur. Nam voluptas quam, esse nesciunt quae provident in ullam facere rerum ab magnam veniam.</p>
+        </section> 
+        <section id="exercise" class="text-container font-xl">
+            <img src="/img/adventure.jpg" alt="picture of sportswoman">
+            <h2 class="lead-text">Get Moving</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores porro, laudantium et quasi incidunt blanditiis velit iste officiis amet placeat possimus repellendus cumque vitae, quibusdam perspiciatis eveniet rerum minus odit!</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus dolorem molestiae tempora veritatis quaerat id perferendis voluptate, esse tempore, magni, totam nam optio in facere nobis aut. Obcaecati fuga totam, nesciunt debitis provident facilis placeat fugit odit, dolores ut veniam.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique beatae doloremque cumque rem dolorum! Provident voluptatibus minima officiis doloribus id.</p>
+        </section>
+    
+     <footer>
+        <nav class="navbar">
+               <ul class="nav-list">
+                    <li class="list-item"><a href="#">WebDev By George</i></a></li>
+                    <li class="list-item"><a href="#">NHS</a></li>
+                    <li class="list-item"><a href="#">Linkedin</a></li>
+                </ul>     
+        </nav>
+     </footer>  
+     <div class="modal modal-close" id="modal">
+         
+         <div class="modal-content results-container">
+                <button class="close-modal-btn">
+                <i class="fas fa-times icon-centre"></i>
+                </button>
+                <h3 class="bmi">Your BMI:</h2>
+                <div class="table-container">
+                     <table>
+                <thead>
+                <tr class="weightAxis">
+                    <td></td>
+                    <th class="weightAxisItem">60</th>
+                    <th class="weightAxisItem">62.5</th>
+                    <th class="weightAxisItem">65</th>
+                    <th class="weightAxisItem">67.5</th>
+                    <th class="weightAxisItem">70</th>
+                    <th class="weightAxisItem">72.5</th>
+                    <th class="weightAxisItem">75</th>
+                    <th class="weightAxisItem">77.5</th>
+                    <th class="weightAxisItem">80</th>
+                    <th class="weightAxisItem">82.5</th>
+                    <th class="weightAxisItem">85</th>
+                    <th class="weightAxisItem">87.5</th>
+                    <th class="weightAxisItem">90</th>
+                    <th class="weightAxisItem">92.5</th>
+                    <th class="weightAxisItem">95</th>
+                    <th class="weightAxisItem">97.5</th>
+                    <th class="weightAxisItem">100</th>
+                    <th class="weightAxisItem">102.5</th>
+                    <th class="weightAxisItem">105</th>
+                    </tr>
+                </thead>
+            
+                <tbody>
+                    <tr class="row">
+                    <th class="heightAxisItem">150</th>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                </tr>
+                <tr class="row">
+                    <th class="heightAxisItem">155</th>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                <tr class="row">
+                    <th class="heightAxisItem">160</th>
+                        <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                </tr>
+                <tr class="row">
+                    <th class="heightAxisItem">165</th>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                </tr>
+                <tr class="row">
+                    <th class="heightAxisItem">170</th>
+                        <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                </tr>
+                <tr class="row">
+                    <th class="heightAxisItem">160</th>
+                        <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                </tr>
+                <tr class="row">
+                    <th class="heightAxisItem">162.5</th>
+                        <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                </tr>
+                <tr class="row">
+                    <th class="heightAxisItem">165</th>
+                        <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                </tr>
+                <tr class="row">
+                    <th class="heightAxisItem">167.5</th>
+                        <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                </tr>
+                <tr class="row">
+                    <th class="heightAxisItem">170</th>
+                        <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                </tr>
+                <tr class="row">
+                    <th class="heightAxisItem">172.5</th>
+                        <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                </tr>
+                <tr class="row">
+                    <th class="heightAxisItem">175</th>
+                        <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                </tr>
+                <tr class="row">
+                    <th class="heightAxisItem">177.5</th>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                </tr>
+                <tr class="row">
+                    <th class="heightAxisItem">180</th>
+                        <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                </tr>
+                <tr class="row">
+                    <th class="heightAxisItem">182.5</th>
+                        <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                </tr>
+                <tr class="row">
+                    <th class="heightAxisItem">185</th>
+                        <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                </tr>
+                <tr class="row">
+                    <th class="heightAxisItem">187.5</th>
+                        <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                </tr>
+                <tr class="row">
+                    <th class="heightAxisItem">190</th>
+                        <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                </tr>
+                <tr class="row">
+                    <th class="heightAxisItem">192.5</th>
+                        <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                    <td class="tableInfo"></td>
+                </tr>
+            </tbody>
+            
+            
+                    </table>
+                
+                </div>
+                <div class="bmi-info-box bg-white">
+                    <p class="bmi-result font-purple font-lg">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti iusto veritatis repudiandae suscipit debitis ducimus officiis qui obcaecati nam ipsam.
+                    </p>
+                </div>
+               
+         </div>
+     </div>
+    </main>
+    
+</body>
+    <script src="scripts.js"></script>
+
+</html>
